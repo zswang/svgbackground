@@ -1,0 +1,26 @@
+{
+  "homepage": "https://github.com/zswang/svgbackground",
+  "main": "svgbackground.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "devDependencies": {},
+  "ignore": [
+    "src",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "name": "svgbackground",
+  "description": "Some simple SVG background generation tools.",
+  "keywords": [
+    "svg",
+    "background",
+    "texture"
+  ],
+  "version": "0.0.3"
+}
