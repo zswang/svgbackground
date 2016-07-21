@@ -11,13 +11,13 @@ var rename = require('gulp-rename');
 var examplejs = require('gulp-examplejs');
 
 gulp.task('build', function() {
-  return gulp.src(['src/bigfont.js'])
+  return gulp.src(['src/svgbackground.js'])
     .pipe(jdists({
       trigger: 'release'
     }))
     .pipe(gulp.dest('./'))
     .pipe(uglify())
-    .pipe(rename('bigfont.min.js'))
+    .pipe(rename('svgbackground.min.js'))
     .pipe(gulp.dest('./'));
 });
 

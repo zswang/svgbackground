@@ -1,26 +1,14 @@
 (function(exportName) {
-
-  /*<jdists encoding="ejs" data="../package.json">*/
   /**
-   * @file <%- name %>
+   * @file svgbackground
    *
-   * <%- description %>
+   * Some simple SVG background generation tools.
    * @author
-       <% (author instanceof Array ? author : [author]).forEach(function (item) { %>
-   *   <%- item.name %> (<%- item.url %>)
-       <% }); %>
-   * @version <%- version %>
-       <% var now = new Date() %>
-   * @date <%- [
-        now.getFullYear(),
-        now.getMonth() + 101,
-        now.getDate() + 100
-      ].join('-').replace(/-1/g, '-') %>
+   *   zswang (http://weibo.com/zswang)
+   * @version 0.0.9
+   * @date 2016-07-21
    */
-  /*</jdists>*/
-
   var exports = exports || {};
-
   /*<function name="rhombusBackgrounds">*/
   /**
    * 菱形花纹背景
@@ -34,10 +22,8 @@
     ```
     ```js
     svgbackground.rhombusBackgrounds('div');
-
     console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
     // > true
-
     console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(2)').style.backgroundImage));
     // > true
     ```
@@ -77,9 +63,7 @@
     if (typeof radius === 'object') {
       radius = radius.radius;
     }
-
     radius = radius || 100;
-
     /**
      * 添加一个三角形
      *
@@ -103,25 +87,21 @@
       var color = 'rgba(255,255,255,' + ((10 + Math.random() * 20) / 100).toFixed(2) + ')';
       return '<path d="M' + a + 'L' + b + 'L' + c + 'Z" fill="' + color + '" stroke="none" />';
     }
-
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">';
     var size = 800 / radius;
     for (var y = 0; y < size; y++) {
       for (var x = 0; x < size; x++) {
         svg += addShape([x * radius * 2 + radius, y * radius * 2 + radius], false);
         svg += addShape([x * radius * 2 + radius, y * radius * 2 + radius], true);
-
         svg += addShape([x * radius * 2, y * radius * 2], false);
         svg += addShape([x * radius * 2, y * radius * 2], true);
       }
     }
     svg += '</svg>';
-
     dom.style.backgroundImage = 'url(data:image/svg+xml;base64,' + btoa(svg) + ')';
   }
   /*</function>*/
   exports.rhombusBackgrounds = rhombusBackgrounds;
-
   if (typeof define === 'function') {
     if (define.amd) {
       define(function() {
@@ -133,5 +113,4 @@
   } else {
     window[exportName] = exports;
   }
-
 })('svgbackground');
