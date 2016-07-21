@@ -24,7 +24,8 @@ gulp.task('build', function() {
 gulp.task('example', function() {
   return gulp.src('src/**.js')
     .pipe(examplejs({
-      header: "var svgbackground = require('../');\n"
+      header: "var svgbackground = require('../');\n",
+      globals: 'btoa,document'
     }))
     .pipe(gulp.dest('test'));
 });

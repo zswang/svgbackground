@@ -5,7 +5,7 @@
    * Some simple SVG background generation tools.
    * @author
    *   zswang (http://weibo.com/zswang)
-   * @version 0.0.9
+   * @version 0.0.12
    * @date 2016-07-21
    */
   var exports = exports || {};
