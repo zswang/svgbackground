@@ -1,7 +1,7 @@
 var svgbackground = require('../');
 
 
-describe("src/svgbackground.js", function () {
+describe("src/texture/rhombusBackgrounds.js", function () {
   var assert = require('should');
   var util = require('util');
   var examplejs_printLines;
@@ -12,7 +12,7 @@ describe("src/svgbackground.js", function () {
   
 
   it("jsdom@rhombusBackgrounds():base", function (done) {
-    jsdom.env("    <div></div>\n    <div></div>", function (err, window) {
+    jsdom.env("  <div></div>\n  <div></div>", function (err, window) {
       global.window = window;
       ['atob', 'btoa', 'document', 'navigator', 'location', 'screen', 'alert', 'prompt'].forEach(
         function (key) {
@@ -26,22 +26,22 @@ describe("src/svgbackground.js", function () {
           
   it("rhombusBackgrounds():base", function () {
     examplejs_printLines = [];
-    svgbackground.rhombusBackgrounds('div');
+  svgbackground.rhombusBackgrounds('div');
 
-    examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
-    assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
+  examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
 
-    examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(2)').style.backgroundImage));
-    assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
+  examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(2)').style.backgroundImage));
+  assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
   });
           
   it("rhombusBackgrounds():none", function () {
     examplejs_printLines = [];
-    svgbackground.rhombusBackgrounds('');
+  svgbackground.rhombusBackgrounds('');
   });
           
   it("jsdom@rhombusBackgrounds():radius => 50", function (done) {
-    jsdom.env("    <div></div>", function (err, window) {
+    jsdom.env("  <div></div>", function (err, window) {
       global.window = window;
       ['atob', 'btoa', 'document', 'navigator', 'location', 'screen', 'alert', 'prompt'].forEach(
         function (key) {
@@ -55,13 +55,13 @@ describe("src/svgbackground.js", function () {
           
   it("rhombusBackgrounds():radius => 50", function () {
     examplejs_printLines = [];
-    svgbackground.rhombusBackgrounds('div', 50);
-    examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
-    assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
+  svgbackground.rhombusBackgrounds('div', 50);
+  examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
   });
           
   it("jsdom@rhombusBackgrounds():radius => {radius: 50}", function (done) {
-    jsdom.env("    <div></div>", function (err, window) {
+    jsdom.env("  <div></div>", function (err, window) {
       global.window = window;
       ['atob', 'btoa', 'document', 'navigator', 'location', 'screen', 'alert', 'prompt'].forEach(
         function (key) {
@@ -75,9 +75,9 @@ describe("src/svgbackground.js", function () {
           
   it("rhombusBackgrounds():radius => {radius: 50}", function () {
     examplejs_printLines = [];
-    svgbackground.rhombusBackgrounds('div', {radius: 50});
-    examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
-    assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
+  svgbackground.rhombusBackgrounds('div', {radius: 50});
+  examplejs_print(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  assert.equal(examplejs_printLines.join("\n"), "true"); examplejs_printLines = [];
   });
           
 });

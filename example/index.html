@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>svgbackground example</title>
+  <script src="../svgbackground.js"></script>
+  <style>
+.rhombusBackgrounds {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  background-repeat: no-repeat;
+}
+.xiangqiBackgrounds {
+  width: 800px;
+  height: 880px;
+  background-color: goldenrod;
+  background-repeat: no-repeat;
+}
+  </style>
+</head>
+<body>
+  <div class="rhombusBackgrounds"></div>
+  <div class="xiangqiBackgrounds"></div>
+</body>
+<script>
+  svgbackground.rhombusBackgrounds('.rhombusBackgrounds');
+  svgbackground.xiangqiBackgrounds('.xiangqiBackgrounds');
+</script>
+</html>

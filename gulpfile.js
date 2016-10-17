@@ -22,7 +22,7 @@ gulp.task('build', function() {
 });
 
 gulp.task('example', function() {
-  return gulp.src('src/**.js')
+  return gulp.src('src/texture/**.js')
     .pipe(examplejs({
       header: "var svgbackground = require('../');\n"
     }))
