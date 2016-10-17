@@ -4,6 +4,34 @@
  *
  * @param {HTMLElement|String} selector 选择器或 HTML 对象
  * @param {Object} options
+ * @example xiangqiBackgrounds():base
+  ```html
+  <div></div>
+  <div></div>
+  ```
+  ```js
+  svgbackground.xiangqiBackgrounds('div');
+
+  console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  // > true
+
+  console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(2)').style.backgroundImage));
+  // > true
+  ```
+ * @example xiangqiBackgrounds():none
+  ```js
+  svgbackground.xiangqiBackgrounds('');
+  ```
+ * @example xiangqiBackgrounds():options
+  ```html
+  <div></div>
+  ```
+  ```js
+  svgbackground.xiangqiBackgrounds('div', { color: 'gray', pieceWidth: 40, pieceHeight: 43 });
+
+  console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  // > true
+  ```
  */
 function xiangqiBackgrounds(dom, options) {
   if (!dom) {

@@ -5,13 +5,8 @@
    * Some simple SVG background generation tools.
    * @author
    *   zswang (http://weibo.com/zswang)
-<<<<<<< HEAD
-   * @version 0.0.14
+   * @version 0.0.18
    * @date 2016-10-17
-=======
-   * @version 0.0.12
-   * @date 2016-07-21
->>>>>>> origin/master
    */
   var exports = exports || {};
   /*<function name="rhombusBackgrounds">*/
@@ -113,6 +108,31 @@ function rhombusBackgrounds(dom, radius) {
  *
  * @param {HTMLElement|String} selector 选择器或 HTML 对象
  * @param {Object} options
+ * @example xiangqiBackgrounds():base
+  ```html
+  <div></div>
+  <div></div>
+  ```
+  ```js
+  svgbackground.xiangqiBackgrounds('div');
+  console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  // > true
+  console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(2)').style.backgroundImage));
+  // > true
+  ```
+ * @example xiangqiBackgrounds():none
+  ```js
+  svgbackground.xiangqiBackgrounds('');
+  ```
+ * @example xiangqiBackgrounds():options
+  ```html
+  <div></div>
+  ```
+  ```js
+  svgbackground.xiangqiBackgrounds('div', { color: 'gray', pieceWidth: 40, pieceHeight: 43 });
+  console.log(/data:image\/svg\+xml/.test(document.querySelector('div:nth-of-type(1)').style.backgroundImage));
+  // > true
+  ```
  */
 function xiangqiBackgrounds(dom, options) {
   if (!dom) {
@@ -199,6 +219,7 @@ function xiangqiBackgrounds(dom, options) {
 }
 /*</function>*/
   exports.xiangqiBackgrounds = xiangqiBackgrounds;
+  /* istanbul ignore next */
   if (typeof define === 'function') {
     if (define.amd) {
       define(function() {

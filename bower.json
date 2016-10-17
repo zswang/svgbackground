@@ -22,9 +22,5 @@
     "background",
     "texture"
   ],
-<<<<<<< HEAD
-  "version": "0.0.14"
-=======
-  "version": "0.0.12"
->>>>>>> origin/master
+  "version": "0.0.18"
 }

@@ -1,10 +1,6 @@
 {
   "name": "svgbackground",
-<<<<<<< HEAD
-  "version": "0.0.14",
-=======
-  "version": "0.0.12",
->>>>>>> origin/master
+  "version": "0.0.18",
   "description": "Some simple SVG background generation tools.",
   "main": "svgbackground.js",
   "repository": {

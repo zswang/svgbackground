@@ -31,6 +31,7 @@
   /*</jdists>*/
   exports.xiangqiBackgrounds = xiangqiBackgrounds;
 
+  /* istanbul ignore next */
   if (typeof define === 'function') {
     if (define.amd) {
       define(function() {
