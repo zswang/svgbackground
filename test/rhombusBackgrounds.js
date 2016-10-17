@@ -12,16 +12,31 @@ describe("src/texture/rhombusBackgrounds.js", function () {
   
 
   it("jsdom@rhombusBackgrounds():base", function (done) {
+<<<<<<< HEAD:test/rhombusBackgrounds.js
     jsdom.env("  <div></div>\n  <div></div>", function (err, window) {
       global.window = window;
       ['atob', 'btoa', 'document', 'navigator', 'location', 'screen', 'alert', 'prompt'].forEach(
         function (key) {
           global[key] = window[key];
+=======
+    jsdom.env("    <div></div>\n    <div></div>", {
+        features: {
+          FetchExternalResources : ["script", "link"],
+          ProcessExternalResources: ["script"]
+>>>>>>> origin/master:test/svgbackground.js
         }
-      );
-      assert.equal(err, null);
-      done();
-    });
+      },
+      function (err, window) {
+        global.window = window;
+        ["btoa","document"].forEach(
+          function (key) {
+            global[key] = window[key];
+          }
+        );
+        assert.equal(err, null);
+        done();
+      }
+    );
   });
           
   it("rhombusBackgrounds():base", function () {
@@ -41,16 +56,31 @@ describe("src/texture/rhombusBackgrounds.js", function () {
   });
           
   it("jsdom@rhombusBackgrounds():radius => 50", function (done) {
+<<<<<<< HEAD:test/rhombusBackgrounds.js
     jsdom.env("  <div></div>", function (err, window) {
       global.window = window;
       ['atob', 'btoa', 'document', 'navigator', 'location', 'screen', 'alert', 'prompt'].forEach(
         function (key) {
           global[key] = window[key];
+=======
+    jsdom.env("    <div></div>", {
+        features: {
+          FetchExternalResources : ["script", "link"],
+          ProcessExternalResources: ["script"]
+>>>>>>> origin/master:test/svgbackground.js
         }
-      );
-      assert.equal(err, null);
-      done();
-    });
+      },
+      function (err, window) {
+        global.window = window;
+        ["btoa","document"].forEach(
+          function (key) {
+            global[key] = window[key];
+          }
+        );
+        assert.equal(err, null);
+        done();
+      }
+    );
   });
           
   it("rhombusBackgrounds():radius => 50", function () {
@@ -61,16 +91,31 @@ describe("src/texture/rhombusBackgrounds.js", function () {
   });
           
   it("jsdom@rhombusBackgrounds():radius => {radius: 50}", function (done) {
+<<<<<<< HEAD:test/rhombusBackgrounds.js
     jsdom.env("  <div></div>", function (err, window) {
       global.window = window;
       ['atob', 'btoa', 'document', 'navigator', 'location', 'screen', 'alert', 'prompt'].forEach(
         function (key) {
           global[key] = window[key];
+=======
+    jsdom.env("    <div></div>", {
+        features: {
+          FetchExternalResources : ["script", "link"],
+          ProcessExternalResources: ["script"]
+>>>>>>> origin/master:test/svgbackground.js
         }
-      );
-      assert.equal(err, null);
-      done();
-    });
+      },
+      function (err, window) {
+        global.window = window;
+        ["btoa","document"].forEach(
+          function (key) {
+            global[key] = window[key];
+          }
+        );
+        assert.equal(err, null);
+        done();
+      }
+    );
   });
           
   it("rhombusBackgrounds():radius => {radius: 50}", function () {

@@ -5,8 +5,13 @@
    * Some simple SVG background generation tools.
    * @author
    *   zswang (http://weibo.com/zswang)
+<<<<<<< HEAD
    * @version 0.0.14
    * @date 2016-10-17
+=======
+   * @version 0.0.12
+   * @date 2016-07-21
+>>>>>>> origin/master
    */
   var exports = exports || {};
   /*<function name="rhombusBackgrounds">*/
