@@ -23,7 +23,7 @@
   "homepage": "https://github.com/zswang/svgbackground",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-jdists": "^0.0.5",
+    "gulp-jdists": "^2.0.0",
     "gulp-examplejs": "^0.0.9",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
