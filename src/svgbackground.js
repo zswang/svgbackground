@@ -31,6 +31,11 @@
   /*</jdists>*/
   exports.xiangqiBackgrounds = xiangqiBackgrounds;
 
+  /*<jdists encoding="fndep" import="texture/squaredBackgrounds.js" depend="squaredBackgrounds">*/
+  var squaredBackgrounds = require('./texture/squaredBackgrounds');
+  /*</jdists>*/
+  exports.squaredBackgrounds = squaredBackgrounds;
+
   /* istanbul ignore next */
   if (typeof define === 'function') {
     if (define.amd) {

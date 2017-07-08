@@ -11,9 +11,15 @@
   background-repeat: no-repeat;
 }
 .xiangqiBackgrounds {
-  width: 800px;
-  height: 880px;
+  width: 400px;
+  height: 440px;
   background-color: goldenrod;
+  background-repeat: no-repeat;
+}
+.squaredBackgrounds {
+  width: 500px;
+  height: 500px;
+  background-color: darkgrey;
   background-repeat: no-repeat;
 }
   </style>
@@ -21,9 +27,11 @@
 <body>
   <div class="rhombusBackgrounds"></div>
   <div class="xiangqiBackgrounds"></div>
+  <div class="squaredBackgrounds"></div>
 </body>
 <script>
   svgbackground.rhombusBackgrounds('.rhombusBackgrounds');
   svgbackground.xiangqiBackgrounds('.xiangqiBackgrounds');
+  svgbackground.squaredBackgrounds('.squaredBackgrounds');
 </script>
 </html>
